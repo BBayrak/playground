@@ -148,8 +148,10 @@
    
     display: block;
     margin: 0.5em;
-    min-height: 35em;
-    overflow: auto;
+    min-height: 42em;
+    overflow: hidden;
+    /*overflow: auto;*/
+    
     position: relative;
     width: auto;
 

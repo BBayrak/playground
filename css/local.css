@@ -1,7 +1,6 @@
 body {
-	padding-top: 50px;
+	padding-top: 30px;
 	background:url('../img/fotolia_45779873.jpg') no-repeat center center fixed;
-/*	background:url('../img/fotolia_66619085.jpg') no-repeat center center fixed;*/
 
 
 	-webkit-background-size:cover;
@@ -34,15 +33,36 @@ body {
 	text-align: center;
 }
 
+.vcenter * {
+    vertical-align: middle;
+    display: inline-block;   
+    
+}
+
+.hcenter *{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .container {
  /*   width: 1170px;*/
     width: 1170px;
 }
 
+.glyphicon-2x {
+    font-size: 48px;
+    opacity: 0;
+}
 
 .my-fluid-container {
     padding-left: 2.5%;
     padding-right: 2.5%;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+.thumbnail{
+	padding: 10px 10px;
+	 text-align: center;
 }
