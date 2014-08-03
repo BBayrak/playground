@@ -1,8 +1,48 @@
 body {
 	padding-top: 50px;
+	background:url('../img/fotolia_45779873.jpg') no-repeat center center fixed;
+/*	background:url('../img/fotolia_66619085.jpg') no-repeat center center fixed;*/
+
+
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	transition: background 0.5s linear;
+}
+
+.bg1{
+	background:url('../img/fotolia1.jpg') no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	transition: background 0.5s linear;
+}
+
+.bg2{
+	background:url('../img/fotolia2.jpg') no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	transition: background 0.5s linear;
 }
 
 .starter-template {
 	padding: 40px 15px;
 	text-align: center;
+}
+
+.container {
+ /*   width: 1170px;*/
+    width: 1170px;
+}
+
+
+.my-fluid-container {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin-left: auto;
+    margin-right: auto;
 }
