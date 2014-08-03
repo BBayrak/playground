@@ -66,3 +66,17 @@ body {
 	padding: 10px 10px;
 	 text-align: center;
 }
+
+.fruchtig{
+	display:none;
+}
+
+.frisch{
+	display:none;
+}
+.holzig{
+	display:none;
+}
+.orientalisch{
+	display:none;
+}

@@ -2,6 +2,7 @@ $( document ).ready(function() {
 
 	var gender="";
 	var nuance="";
+	var dhtml="";
 
 
 	$("#wizard").steps({transitionEffect: "slideLeft"});
@@ -20,7 +21,7 @@ $( document ).ready(function() {
 		wp.find(".glyphicon").remove();
 		var sign = $("<span class='glyphicon glyphicon-ok-circle glyphicon-2x'></span>");
 		$(this).find(".caption").last().append(sign);
-		$(this).find(".glyphicon").animate({"opacity": "1"}, "fast");
+		$(this).find(".glyphicon").animate({"opacity": "1"});
 	});
 
 	$("#genderM").on("click", function(){
@@ -33,6 +34,44 @@ $( document ).ready(function() {
 		$('#gender').val(gender);
 	})	
 
+	$("#orientalisch").on("click", function(){
+		nuance="orientalisch";
+		$('#nuance').val(nuance);
+		hideAll();
+		$('#wizard').find(".orientalisch").show();
+		
+	});
+	
+	$("#holzig").on("click", function(){
+		nuance="holzig";
+		$('#nuance').val(nuance);
+		hideAll();
+		$('#wizard').find(".holzig").show();
+	});
+	
+	$("#fruchtig_floral").on("click", function(){
+		nuance="fruchtig_floral";
+		$('#nuance').val(nuance);
+		hideAll();
+		$('#wizard').find(".fruchtig").show();
+	});
+	
+	$("#frisch").on("click", function(){
+		nuance="frisch";
+		
+		$('#nuance').val(nuance);
+		hideAll();
+		$('#wizard').find(".frisch").show();
+	});
+	
+	
+	function hideAll(){
+		$('#wizard').find(".fruchtig").hide();
+		$('#wizard').find(".frisch").hide();
+		$('#wizard').find(".holzig").hide();
+		$('#wizard').find(".orientalisch").hide();
+	}
+	
 
 	/*
 
