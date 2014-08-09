@@ -2,12 +2,18 @@ $( document ).ready(function() {
 
 	var gender="";
 	var nuance="";
-	var dhtml="";
+	var effect="";
+	
+	//$("html").niceScroll({cursorcolor:"#F00"}); 
+	
 
+	 
 
 	$("#wizard").steps({transitionEffect: "slideLeft"});
 
 
+	
+	
 	$('.btn').button()
 
 
@@ -72,6 +78,31 @@ $( document ).ready(function() {
 		$('#wizard').find(".orientalisch").hide();
 	}
 	
+	$("#blumig-orientalisch").on("click", function(){
+		effect="blumig-orientalisch";		
+		$('#effect').val(effect);
+	});
+	
+	$("#sanft-orientalisch").on("click", function(){
+		effect="sanft-orientalisch";		
+		$('#effect').val(effect);
+	});
+	
+	
+	$("#orientalisch2").on("click", function(){
+		effect="orientalisch";	
+		$('#effect').val(effect);
+	});
+	
+	$("#holzig-orientalisch").on("click", function(){
+		effect="holzig-orientalisch";		
+		$('#effect').val(effect);
+	});
+	
+
+	
+	
+	$(".content").niceScroll({cursorcolor:"#bbb"});
 
 	/*
 
