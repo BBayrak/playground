@@ -1,18 +1,14 @@
 $( document ).ready(function() {
 
-	var gender="";
-	var nuance="";
-	var effect="";
 	
-	$("#wizard").steps({
+	var $wizard = $("#wizard");
+	
+	$wizard.steps({
 		headerTag : "h2",
 		bodyTag : "section",
 		transitionEffect : "slideLeft"
 	});
 	
-
-
-//	$("#wizard").steps({transitionEffect: "slideLeft"});
 
 /*
 	
@@ -23,68 +19,45 @@ $( document ).ready(function() {
 			});
 */	
 	
-	$('.btn').button()
-
-
-	$("#filters").on("click", ".featured", function(){
-		$(".tour").filter(".featured").addClass("highlight");
-	});
 	
 	
-	$("article").on("mouseenter", function(){
-		$(this).css({"opacity": "0.8","cursor":"pointer"});
-	}).on("mouseleave", function(){
-		$(this).css({"opacity": "1","cursor":"default"});
-	}).on("click", function(){		
-		var wp = $(this).closest(".wizardPage");
-		wp.find(".glyphicon").remove();
-		var sign = $("<span class='glyphicon glyphicon-ok-circle glyphicon-2x'></span>");
-		$(this).children(".caption").append(sign);
-		$(this).find(".glyphicon").animate({"opacity": "1"});		
-		var btn= $(this).closest(".btn");
-		$wizard.steps( btn.attr("id").split("-")[0] );		
+//	$(".btn").button();
+	
+	$(".next-step1").on("click", function(){
+		$wizard.steps( "next" );
+		$('#gender').val($(this).attr("id"));		
 	});
 
-	$("#genderM").on("click", function(){
-		gender="m";
-		$('#gender').val(gender);
-	});
-
-	$("#genderF").on("click", function(){
-		gender="f";
-		$('#gender').val(gender);
-	})	
-
-	$("#orientalisch").on("click", function(){
-		nuance="orientalisch";
-		$('#nuance').val(nuance);
+	$(".next-step2").on("click", function(){
+		$wizard.steps( "next" );
+		$('#nuance').val($(this).attr("id"));
 		hideAll();
-		$('#wizard').find(".orientalisch").show();
-		
+		$('#wizard').find("."+$(this).attr("id")).show();
+				
+		if($(this).attr("id") == "holzig" )
+		{
+			$('#effect').val("würzig");	
+			$wizard.steps( "next" );
+		}
 	});
 	
-	$("#holzig").on("click", function(){
-		nuance="holzig";
-		$('#nuance').val(nuance);
-		hideAll();
-		$('#wizard').find(".holzig").show();
+	$(".next-step3").on("click", function(){		
+		$('#effect').val($(this).attr("id"));
+		$wizard.steps( "next" );
+				
 	});
 	
-	$("#fruchtig_floral").on("click", function(){
-		nuance="fruchtig_floral";
-		$('#nuance').val(nuance);
-		hideAll();
-		$('#wizard').find(".fruchtig").show();
+	$(".next-step4").on("click", function(){
+		$('#jahr').val($(this).attr("id"));	
+		$wizard.steps( "next" );
 	});
 	
-	$("#frisch").on("click", function(){
-		nuance="frisch";
-		
-		$('#nuance').val(nuance);
-		hideAll();
-		$('#wizard').find(".frisch").show();
+	$(".next-step5").on("click", function(){
+		$('#zeit').val($(this).attr("id"));			
+		/* HIER DIE LISTE FÜR NÄCHSTE SEITE VORBEREITEN UNF FÜLLEN
+		 * */
+		$wizard.steps( "next" );
 	});
-	
 	
 	function hideAll(){
 		$('#wizard').find(".fruchtig").hide();
@@ -92,27 +65,6 @@ $( document ).ready(function() {
 		$('#wizard').find(".holzig").hide();
 		$('#wizard').find(".orientalisch").hide();
 	}
-	
-	$("#blumig-orientalisch").on("click", function(){
-		effect="blumig-orientalisch";		
-		$('#effect').val(effect);
-	});
-	
-	$("#sanft-orientalisch").on("click", function(){
-		effect="sanft-orientalisch";		
-		$('#effect').val(effect);
-	});
-	
-	
-	$("#orientalisch2").on("click", function(){
-		effect="orientalisch";	
-		$('#effect').val(effect);
-	});
-	
-	$("#holzig-orientalisch").on("click", function(){
-		effect="holzig-orientalisch";		
-		$('#effect').val(effect);
-	});
 	
 
 	

@@ -41,151 +41,203 @@
 
 
 
-
+	<input type="text" name="gender" id="gender" value="">
+	<input type="text" name="nuance" id="nuance" value="">
+	<input type="text" name="effect" id="effect" value="">
+	<input type="text" name="jahr" 	 id="jahr" 	 value="">
+	<input type="text" name="zeit"	 id="zeit" 	 value="">
+	
 		<div class="content">
-			<h1>Basic Demo</h1>
+			<h1>Duftberater</h1>
 			<div id="wizard">
-				<h2>First Step</h2>
+			
+				<h2>Geschlecht</h2>
 				<section>
 					<div class="row">
 						<div class="col-sm-12 col-md-12 main">
-							<h1 class="page-header">Dashboard</h1>
+							<h2 class="page-header">Ich suche einen Duft für...</h2>
 							<div class="row placeholders">
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/sky"
-										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+								<div class="col-xs-6 col-sm-6 placeholder">
+									<img src="img/frau.jpg"
+										class="img-responsive rounded" alt="Generic placeholder thumbnail">
+									<p><button type="button" class="btn btn-default next-step1" id="jf">...eine junge Frau.</button></p>
+									<p><button type="button" class="btn btn-default next-step1" id="f">...eine Dame.</button></p>
 								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/vine"
-										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
-								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/sky"
-										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
-								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/vine"
-										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+								<div class="col-xs-6 col-sm-6 placeholder">
+									<img src="img/mann.jpg"
+										class="img-responsive rounded" alt="Generic placeholder thumbnail">
+									<p><button type="button" class="btn btn-default next-step1" id="jm">...einen jungen Mann.</button></p>
+									<p><button type="button" class="btn btn-default next-step1" id="m">...einen Herren.</button></p>
 								</div>
 							</div>
 						</div>
 					</div>
+				</section>
+				
+				<h2>Nuancen</h2>
+				<section class="content">
+					<div class="row">
+						<div class="col-sm-12 col-md-12 main">
+							<h2 class="page-header">Folgender Duftcharakter spricht mich am meisten an:</h2>
+							<div class="row placeholders">
+								<div class="col-xs-6 col-sm-3 placeholder">
+									<img src="img/orientalisch.jpg"
+										class="img-responsive" alt="Generic placeholder thumbnail">
+									<p><button type="button" class="btn btn-default next-step2" id="orientalisch">orientalisch</button></p>
+									<span class="text-muted">würzig, süss</span>
+								</div>
+								<div class="col-xs-6 col-sm-3 placeholder">
+									<img src="img/holzig.jpg"
+										class="img-responsive" alt="Generic placeholder thumbnail">
+									<p><button type="button" class="btn btn-default next-step2" id="holzig">holzig</button></p>
+									<span class="text-muted">würzig</span>
+								</div>
+								<div class="col-xs-6 col-sm-3 placeholder">
+									<img src="img/fruchtig_floral.jpg"
+										class="img-responsive" alt="Generic placeholder thumbnail">
+									<p><button type="button" class="btn btn-default next-step2" id="fruchtig">fruchtig</button></p>
+									<span class="text-muted">blumig, süss</span>
+								</div>
+								<div class="col-xs-6 col-sm-3 placeholder">
+									<img src="img/frisch.jpg"
+										class="img-responsive" alt="Generic placeholder thumbnail">
+									<p><button type="button" class="btn btn-default next-step2" id="frisch">frisch</button></p>
+									<p><span class="text-muted">aquatisch, sportlich, zitrus</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				
+				
+				<h2>Wirkung</h2>
+				<section>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 main">
+							<h2 class="page-header">So sollte mein Duft am ehesten auf andere wirken:</h2>
+							<div class="row placeholders">
+							
+								<div class="col-xs-6 col-sm-6 placeholder orientalisch">
+									<img src="img/orientalisch.jpg"
+										class="img-responsive" alt="Generic placeholder thumbnail">
+									<p><button type="button" class="btn btn-default next-step3" id="würzig">würzig</button></p>
+								</div>
+								<div class="col-xs-6 col-sm-6 placeholder orientalisch">
+									<img src="img/orientalisch.jpg"
+										class="img-responsive" alt="Generic placeholder thumbnail">
+									<p><button type="button" class="btn btn-default next-step3" id="süss">süss</button></p>
+									<span class="text-muted">würzig, süss</span>
+								</div>
+								
+								
+								<div class="col-xs-12 col-sm-12 placeholder holzig">
+									<img src="img/holzig.jpg"
+										class="img-responsive" alt="Generic placeholder thumbnail">
+									<p><button type="button" class="btn btn-default next-step3" id="würzig">würzig</button></p>
+								</div>
 
 
-				</section>
-				<h2>Second Step</h2>
-				<section>
-					<div class="row">
-						<div class="col-sm-12 col-md-12 main">
-							<h1 class="page-header">Dashboard</h1>
-							<div class="row placeholders">
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/sky"
+								<div class="col-xs-6 col-sm-6 placeholder fruchtig">
+									<img src="img/fruchtig_floral.jpg"
 										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+									<p><button type="button" class="btn btn-default next-step3" id="blumig">blumig</button></p>
 								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/vine"
+								<div class="col-xs-6 col-sm-6 placeholder fruchtig">
+									<img src="img/fruchtig_floral.jpg"
 										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+									<p><button type="button" class="btn btn-default next-step3" id="süss">süss</button></p>
 								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/sky"
+
+
+								<div class="col-xs-6 col-sm-4 placeholder frisch">
+									<img src="img/frisch.jpg"
 										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+									<p><button type="button" class="btn btn-default next-step3" id="aquatisch">aquatisch</button></p>
 								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/vine"
+								<div class="col-xs-6 col-sm-4 placeholder frisch">
+									<img src="img/frisch.jpg"
 										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+									<p><button type="button" class="btn btn-default next-step3" id="sportlich">sportlich</button></p>
 								</div>
-							</div>
+								<div class="col-xs-6 col-sm-4 placeholder frisch">
+									<img src="img/frisch.jpg"
+										class="img-responsive" alt="Generic placeholder thumbnail">
+									<p><button type="button" class="btn btn-default next-step3" id="zitrus">zitrus</button></p>
+								</div>
+
 						</div>
 					</div>
 				</section>
-				<h2>Third Step</h2>
+				<h2>Saison</h2>
 				<section>
 					<div class="row">
 						<div class="col-sm-12 col-md-12 main">
-							<h1 class="page-header">Dashboard</h1>
-							<div class="row placeholders">
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/sky"
+							<h2 class="page-header">Für diese Jahreszeit:</h2>
+							<div class="row placeholders">							
+								<div class="col-xs-4 col-sm-3 placeholder">
+									<img src="img/orientalisch.jpg"
 										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+									<p><button type="button" class="btn btn-default next-step4" id="Frühling">Frühling</button></p>
 								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/vine"
+								<div class="col-xs-4 col-sm-3 placeholder">
+									<img src="img/orientalisch.jpg"
 										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+									<p><button type="button" class="btn btn-default next-step4" id="Sommer">Sommer</button></p>
 								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/sky"
+								<div class="col-xs-4 col-sm-3 placeholder">
+									<img src="img/holzig.jpg"
 										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+									<p><button type="button" class="btn btn-default next-step4" id="Herbst">Herbst</button></p>
 								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/vine"
+								<div class="col-xs-4 col-sm-3 placeholder">
+									<img src="img/fruchtig_floral.jpg"
 										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+									<p><button type="button" class="btn btn-default next-step4" id="Winter">Winter</button></p>
 								</div>
-							</div>
+								<div class="col-xs-12 col-sm-12 placeholder">
+									<p><button type="button" class="btn btn-default next-step4" id="alleJahreszeiten">Alle Jahreszeiten</button></p>
+								</div>
 						</div>
 					</div>
 				</section>
-				<h2>Forth Step</h2>
+			    
+			    <h2>Tageszeit</h2>
 				<section>
 					<div class="row">
 						<div class="col-sm-12 col-md-12 main">
-							<h1 class="page-header">Dashboard</h1>
-							<div class="row placeholders">
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/sky"
+							<h2 class="page-header">Für diese Tageszeit:</h2>
+							<div class="row placeholders">							
+								<div class="col-xs-6 col-sm-6 placeholder">
+									<img src="img/orientalisch.jpg"
 										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+									<p><button type="button" class="btn btn-default next-step5" id="Tag">Tag</button></p>
 								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/vine"
+								<div class="col-xs-6 col-sm-6 placeholder">
+									<img src="img/orientalisch.jpg"
 										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
+									<p><button type="button" class="btn btn-default next-step5" id="Nacht">Nacht</button></p>
 								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/sky"
-										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
-								</div>
-								<div class="col-xs-6 col-sm-3 placeholder">
-									<img data-src="holder.js/200x200/auto/vine"
-										class="img-responsive" alt="Generic placeholder thumbnail">
-									<h4>Label</h4>
-									<span class="text-muted">Something else</span>
-								</div>
-							</div>
 						</div>
 					</div>
-				</section>
+				</section>		
+				<h2>Empfehlung</h2>
+				<section>
+					<div class="row">
+						<div class="col-sm-12 col-md-12 main">
+							<h2 class="page-header">Asperias empfiehlt folgende Düfte:</h2>
+							<div class="row placeholders">	
+								<div class="col-xs-12 col-sm-12 placeholder">
+									<p><button type="button" class="btn btn-default next-step5" id="Nacht" href="index.html">HIER WIRD DEMNÄCHST DIE ERGEBNISLISTE ANGEZEIGT</button></p>
+								</div>
+						</div>
+					</div>
+				</section>		
 			</div>
 		</div>
 	</div>
+	
+	
+	<!--
 
 	<div class="container-fluid">
 		<div class="row">
@@ -220,7 +272,7 @@
 			</div>
 		</div>
 	</div>
-
+-->
 
 
 
