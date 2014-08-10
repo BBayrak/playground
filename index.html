@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0">  -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="icon" href="../../favicon.ico">
+
 
 <title>Duftberater</title>
 
-
-
+<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
 <link rel="stylesheet" href="css/jquery.steps.css">
 <link rel="stylesheet" href="css/local.css">
 
@@ -40,7 +46,8 @@
 
 <body>
 
-	<aside class="image-bg-fixed-height"></aside>
+	<!-- <aside class="image-bg-fixed-height"></aside>
+	 
 
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
@@ -60,10 +67,10 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
-			<!--/.nav-collapse -->
 		</div>
 	</div>
-
+	-->
+	<!--  
 	<div class="container">
 
 		<div class="starter-template">
@@ -72,108 +79,103 @@
 				Duftkomposition, die Ihre Persönlichkeit perfekt unterstreicht!</p>
 		</div>
 	</div>
+-->
+	<div class="my-fluid-container" id="my-fluid-container">
 
-	<div class="my-fluid-container">
-
-		<div id="wizard" >
+		<div id="wizard">
 			<h1>Geschlecht</h1>
-			<div class="wizardPage" >
-				<div class="col-lg-4">
-					<div class="alert alert-info" role="alert">
-						<h4>Ich suche einen Duft für...</h4>
+			<div class="wizardPage">
+
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<div class="quest transparent">
+							<h4>Ich suche einen Duft für...</h4>
+						</div>
 					</div>
 				</div>
-				<div class="span4 col-lg-4">
-					<article class="thumbnail" id="genderF">
-						<img src="img/frau.jpg" alt="">
-						<div class="caption">
-							<h3>...eine Frau.</h3>
-							<p>Donec id elit non mi porta gravida at eget metus.</p>
-							<p class="clearfix"></p>
-						</div>
-					</article>
-				</div>
-				<div class="span4 col-lg-4">
-					<article class="thumbnail" id="genderM">
-						<img src="img/mann.jpg" alt="">
-						<div class="caption">
-							<h3>...einen Mann.</h3>
-							<p>Donec id elit non mi porta gravida at eget metus.</p>
-							<p class="clearfix"></p>
-						</div>
-					</article>
-				</div>
 
+				<div class="row">
+					<div class="col-sm-6 col-md-6 btn" id="next-step">
+						<article class="thumbnail transparent" id="genderF">
+							<img src="img/frau.jpg" class="img-responsive" alt="">
+							<div class="caption">
+								<h3>...eine junge Frau.</h3>
+							</div>
+							<div class="caption">
+								<h3>...eine Dame.</h3>
+							</div>
+						</article>
+					</div>
+					<div class="col-sm-6 col-md-6 btn" id="next-step">
+						<article class="thumbnail transparent" id="genderM">
+							<img src="img/mann.jpg" class="img-responsive" alt="">
+							<div class="caption">
+								<h3>...einen Mann.</h3>
+							</div>
+						</article>
+					</div>
+				</div>
 			</div>
 
 			<h1>Duftnuance</h1>
-			<div class="wizardPage">
+			<div class="wizardPage" id="wizardPage">
 
-				<div class="col-lg-4">
-					<div class="alert alert-info" role="alert">
-						<h4>Folgender Duftcharakter spricht mich am meisten an:</h4>
+				<div class="row">
+					<div class="col-sm-12 col-md-12">
+						<div class="quest transparent">
+							<h4>Folgender Duftcharakter spricht mich am meisten an:</h4>
+						</div>
 					</div>
 				</div>
-				<div class="span4 col-lg-2">
-					<article class="thumbnail" id="orientalisch">
-						<img src="img/orientalisch.jpg" alt="">
-						<div class="caption">
-							<h3>ORIENTALISCH</h3>
-							<p>blumig-orientalisch</p>
-							<p>sanft-orientalisch</p>
-							<p>orientalisch</p>
-							<p>holzig-orientalisch</p>
-							<p class="clearfix"></p>
-						</div>
-					</article>
-				</div>
+				<div class="row">
+					<div class="col-sm-3 col-md-3 btn" id="next-step">
+						<article class="thumbnail transparent" id="orientalisch">
+							<img src="img/orientalisch.jpg" alt="">
+							<div class="caption">
+								<h3>ORIENTALISCH</h3>
+								<p>blumig-orientalisch, sanft-orientalisch, orientalisch,
+									holzig-orientalisch</p>
+							</div>
+						</article>
+					</div>
 
-				<div class="span4 col-lg-2">
-					<article class="thumbnail" id="holzig">
-						<img src="img/holzig.jpg" alt="">
-						<div class="caption">
-							<h3>HOLZIG</h3>
-							<p>holzig</p>
-							<p>moosig-holzig</p>
-							<p>trocken-holzig</p>
-							<p>aromatisch</p>
-							<p class="clearfix"></p>
-						</div>
-					</article>
-				</div>
+					<div class="col-sm-3 col-md-3 btn" id="previous-step">
+						<article class="thumbnail transparent" id="holzig">
+							<img src="img/holzig.jpg" alt="">
+							<div class="caption">
+								<h3>HOLZIG</h3>
+								<p>holzig, moosig-holzig, trocken-holzig, aromatisch</p>
+							</div>
+						</article>
+					</div>
 
-				<div class="span4 col-lg-2">
-					<article class="thumbnail" id="fruchtig_floral">
-						<img src="img/fruchtig_floral.jpg" alt="">
-						<div class="caption">
-							<h3>FRUCHTIG-FLORAL</h3>
-							<p>fruchtig</p>
-							<p>blumig</p>
-							<p>sanft-blumig</p>
-							<p class="clearfix"></p>
-						</div>
-					</article>
-				</div>
+					<div class="col-sm-3 col-md-3 btn">
+						<article class="thumbnail transparent" id="fruchtig_floral">
+							<img src="img/fruchtig_floral.jpg" alt="">
+							<div class="caption">
+								<h3>FRUCHTIG-FLORAL</h3>
+								<p>fruchtig, blumig, sanft-blumig</p>
+							</div>
+						</article>
+					</div>
 
-				<div class="span4 col-lg-2">
-					<article class="thumbnail" id="frisch">
-						<img src="img/frisch.jpg" alt="">
-						<div class="caption">
-							<h3>FRISCH</h3>
-							<p>zitrisch</p>
-							<p>aquatisch</p>
-							<p>grün</p>
-							<p class="clearfix"></p>
-						</div>
-					</article>
-				</div>
+					<div class="col-sm-3 col-md-3 btn">
+						<article class="thumbnail transparent" id="frisch">
+							<img src="img/frisch.jpg" alt="">
+							<div class="caption">
+								<h3>FRISCH</h3>
+								<p>zitrisch, aquatisch, grün</p>
+							</div>
+						</article>
+					</div>
 
+				</div>
 			</div>
 
 			<h1>Wirkung</h1>
 			<div class="wizardPage dynamicPage">
 
-				<div class="col-lg-4">
+				<div class="col-lg-1">
 					<div class="alert alert-info" role="alert">
 						<h4>So sollte mein Duft am ehesten auf andere wirken:</h4>
 					</div>
@@ -181,8 +183,8 @@
 
 
 
-				<div class="span4 col-lg-2 fruchtig">
-					<article class="thumbnail" id="sanft-blumig">
+				<div class="col-lg-2 fruchtig">
+					<article class="thumbnail transparent" id="sanft-blumig">
 						<img src="img/fruchtig_floral.jpg" alt="">
 						<div class="caption">
 							<h3>sanft-blumig</h3>
@@ -191,8 +193,8 @@
 					</article>
 				</div>
 
-				<div class="span4 col-lg-2 fruchtig">
-					<article class="thumbnail" id="blumig">
+				<div class="col-lg-2 fruchtig">
+					<article class="thumbnail transparent" id="blumig">
 						<img src="img/fruchtig_floral.jpg" alt="">
 						<div class="caption">
 							<h3>blumig</h3>
@@ -201,8 +203,8 @@
 					</article>
 				</div>
 
-				<div class="span4 col-lg-2 fruchtig">
-					<article class="thumbnail" id="fruchtig">
+				<div class="col-lg-2 fruchtig">
+					<article class="thumbnail transparent" id="fruchtig">
 						<img src="img/fruchtig_floral.jpg" alt="">
 						<div class="caption">
 							<h3>fruchtig</h3>
@@ -220,8 +222,8 @@
 
 
 
-				<div class="span4 col-lg-2 frisch">
-					<article class="thumbnail" id="zitrisch">
+				<div class="col-lg-2 frisch">
+					<article class="thumbnail transparent" id="zitrisch">
 						<img src="img/frisch.jpg" alt="">
 						<div class="caption">
 							<h3>zitrisch</h3>
@@ -230,8 +232,8 @@
 					</article>
 				</div>
 
-				<div class="span4 col-lg-2 frisch">
-					<article class="thumbnail" id="aquatisch">
+				<div class="col-lg-2 frisch">
+					<article class="thumbnail transparent" id="aquatisch">
 						<img src="img/frisch.jpg" alt="">
 						<div class="caption">
 							<h3>aquatisch</h3>
@@ -240,8 +242,8 @@
 					</article>
 				</div>
 
-				<div class="span4 col-lg-2 frisch">
-					<article class="thumbnail" id="grün">
+				<div class="col-lg-2 frisch">
+					<article class="thumbnail transparent" id="grün">
 						<img src="img/frisch.jpg" alt="">
 						<div class="caption">
 							<h3>grün</h3>
@@ -255,8 +257,8 @@
 
 
 
-				<div class="span4 col-lg-2 holzig">
-					<article class="thumbnail" id="holzig">
+				<div class="col-lg-2 holzig">
+					<article class="thumbnail transparent" id="holzig">
 						<img src="img/holzig.jpg" alt="">
 						<div class="caption">
 							<h3>holzig</h3>
@@ -265,8 +267,8 @@
 					</article>
 				</div>
 
-				<div class="span4 col-lg-2 holzig">
-					<article class="thumbnail" id="moosig-holzig">
+				<div class="col-lg-2 holzig">
+					<article class="thumbnail transparent" id="moosig-holzig">
 						<img src="img/holzig.jpg" alt="">
 						<div class="caption">
 							<h3>moosig-holzig</h3>
@@ -275,8 +277,8 @@
 					</article>
 				</div>
 
-				<div class="span4 col-lg-2 holzig">
-					<article class="thumbnail" id="trocken-holzig">
+				<div class="col-lg-2 holzig">
+					<article class="thumbnail transparent" id="trocken-holzig">
 						<img src="img/holzig.jpg" alt="">
 						<div class="caption">
 							<h3>trocken-holzig</h3>
@@ -285,8 +287,8 @@
 					</article>
 				</div>
 
-				<div class="span4 col-lg-2 holzig">
-					<article class="thumbnail" id="aromatisch">
+				<div class="col-lg-2 holzig">
+					<article class="thumbnail transparent" id="aromatisch">
 						<img src="img/holzig.jpg" alt="">
 						<div class="caption">
 							<h3>aromatisch</h3>
@@ -296,8 +298,8 @@
 				</div>
 
 
-				<div class="span4 col-lg-2 orientalisch">
-					<article class="thumbnail" id="blumig-orientalisch">
+				<div class="col-lg-2 orientalisch">
+					<article class="thumbnail transparent" id="blumig-orientalisch">
 						<img src="img/orientalisch.jpg" alt="">
 						<div class="caption">
 							<h3>blumig-orientalisch</h3>
@@ -305,8 +307,8 @@
 						</div>
 					</article>
 				</div>
-				<div class="span4 col-lg-2 orientalisch">
-					<article class="thumbnail" id="sanft-orientalisch">
+				<div class="col-lg-2 orientalisch">
+					<article class="thumbnail transparent" id="sanft-orientalisch">
 						<img src="img/orientalisch.jpg" alt="">
 						<div class="caption">
 							<h3>sanft-orientalisch</h3>
@@ -315,8 +317,8 @@
 					</article>
 				</div>
 
-				<div class="span4 col-lg-2 orientalisch">
-					<article class="thumbnail" id="orientalisch2">
+				<div class="col-lg-2 orientalisch">
+					<article class="thumbnail transparent" id="orientalisch2">
 						<img src="img/orientalisch.jpg" alt="">
 						<div class="caption">
 							<h3>orientalisch</h3>
@@ -325,8 +327,8 @@
 					</article>
 				</div>
 
-				<div class="span4 col-lg-2 orientalisch">
-					<article class="thumbnail" id="holzig-orientalisch">
+				<div class="col-lg-2 orientalisch">
+					<article class="thumbnail transparent" id="holzig-orientalisch">
 						<img src="img/orientalisch.jpg" alt="">
 						<div class="caption">
 							<h3>holzig-orientalisch</h3>
@@ -349,24 +351,28 @@
 
 	</div>
 
-
+	<!-- 
 	<input type="text" name="gender" id="gender" value="">
 	<input type="text" name="nuance" id="nuance" value="">
 	<input type="text" name="effect" id="effect" value="">
 	<input type="text" name="ampm" id="ampm" value="">
 	<input type="text" name="opt" id="opt" value="">
-
+ -->
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+	<!-- Latest compiled and minified JavaScript -->
 	<script
 		src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 	<script src="js/jquery.steps.min.js"></script>
 	<script src="js/jquery.cookie.js"></script>
 	<script src="js/jquery.nicescroll.min.js"></script>
-	
+
 
 	<script src="js/main.js"></script>
 

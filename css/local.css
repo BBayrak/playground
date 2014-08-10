@@ -1,6 +1,5 @@
 body {
-	padding-top: 30px;
-	background:url('../img/fotolia_45779873.jpg') no-repeat center center fixed;
+	background:url('../img/fotolia_50986002.jpg') no-repeat center center fixed;
 
 
 	-webkit-background-size:cover;
@@ -29,7 +28,7 @@ body {
 }
 
 .starter-template {
-	padding: 40px 15px;
+	/*padding: 40px 15px;*/
 	text-align: center;
 }
 
@@ -46,7 +45,7 @@ body {
 
 .container {
  /*   width: 1170px;*/
-    width: 1170px;
+   
 }
 
 .glyphicon-2x {
@@ -55,16 +54,32 @@ body {
 }
 
 .my-fluid-container {
-    padding-left: 2.5%;
+  /*  padding-left: 2.5%;
     padding-right: 2.5%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 2.5%;*/
+     width: 100%;
 }
 
 
 .thumbnail{
 	padding: 10px 10px;
-	 text-align: center;
+	text-align: center;
+
+
+}
+
+.transparent{
+	 background:#fff;
+	 background: rgba(256, 256, 256, .6);
+}
+
+.quest{
+	padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
 }
 
 .fruchtig{

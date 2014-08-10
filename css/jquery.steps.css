@@ -94,17 +94,21 @@
 {
     display: block;
     width: auto;
-    margin: 0 0.5em 0.5em;
+  /*  margin: 0 0.5em 0.5em;*/
     padding: 1em 1em;
     text-decoration: none;
+/*    border:0px;
+    border-left-width:1px;
+  	border-style:solid;
+  	border-color:#ddd;*/
 
-    -webkit-border-radius: 5px;
+ /*  -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     
         -webkit-box-shadow: 2px 2px 3px #bbb;
     -moz-box-shadow: 2px 2px 3px #bbb;
-    box-shadow: 2px 2px 2px #bbb;
+    box-shadow: 2px 2px 2px #bbb;*/
 }
 
 .wizard > .steps .disabled a,
@@ -144,17 +148,18 @@
 .wizard > .content
 {
 	background:#fff;
-    background: rgba(256, 256, 256, .6);
+    background: rgba(256, 256, 256, .0);
    
     display: block;
-    margin: 0.5em;
-    min-height: 42em;
+  /*  margin: 0.5em;
+  */
+    min-height:38em;
    /* overflow: hidden;*/
     overflow: auto;
     
     position: relative;
-    width: auto;
-
+    width: 100%;
+/*
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -162,6 +167,7 @@
     -webkit-box-shadow: 2px 2px 3px #bbb;
     -moz-box-shadow: 2px 2px 3px #bbb;
     box-shadow: 2px 2px 2px #bbb;
+    */
     /*text-shadow: 2px 2px 2px #fff;*/
 }
 
@@ -169,8 +175,9 @@
 {
     display: inline;
     float: left;
-    margin: 0 2.5% 0.5em 2.5%;
-    width: 95%;
+  /*  margin: 0 2.5% 0.5em 2.5%;
+    width: 95%;*/
+  width:100%
 }
 
 .wizard > .content > .body

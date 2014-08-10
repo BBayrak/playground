@@ -3,31 +3,79 @@ $( document ).ready(function() {
 	var gender="";
 	var nuance="";
 	var effect="";
-	
-	//$("html").niceScroll({cursorcolor:"#F00"}); 
-	
-
 	 
-
-	$("#wizard").steps({transitionEffect: "slideLeft"});
-
-
+	var $wizard = $("#wizard");
 	
+
+	$wizard.steps
+	({
+		  /* Appearance */
+	    headerTag: "h1",
+	    bodyTag: "div",
+	    contentContainerTag: "div",
+	    actionContainerTag: "div",
+	    stepsContainerTag: "div",
+	    cssClass: "wizard",
+	    stepsOrientation: $.fn.steps.stepsOrientation.horizontal,
+
+	    /* Templates */
+	    titleTemplate: '<span class="number">#index#.</span> #title#',
+	    loadingTemplate: '<span class="spinner"></span> #text#',
+
+	    /* Behaviour */
+	    autoFocus: false,
+	    enableAllSteps: false,
+	    enableKeyNavigation: true,
+	    enablePagination: true,
+	    suppressPaginationOnFocus: true,
+	    enableContentCache: true,
+	    enableCancelButton: true,
+	    enableFinishButton: true,
+	    preloadContent: false,
+	    showFinishButtonAlways: false,
+	    forceMoveForward: false,
+	    saveState: false,
+	    startIndex: 0,
+
+	    /* Transition Effects */
+	    transitionEffect: $.fn.steps.transitionEffect.slideLeft ,
+	    transitionEffectSpeed: 200,
+
+
+
+	});
+
+//	$("#wizard").steps({transitionEffect: "slideLeft"});
+
+/*
+	
+	$("a[id$=step]").on("click", function (e)
+			{
+			    e.preventDefault();
+			    $wizard.steps( $(this).attr("id").split("-")[0] );
+			});
+*/	
 	
 	$('.btn').button()
 
 
-
-	$(".thumbnail").on("mouseenter", function(){
+	$("#filters").on("click", ".featured", function(){
+		$(".tour").filter(".featured").addClass("highlight");
+	});
+	
+	
+	$("article").on("mouseenter", function(){
 		$(this).css({"opacity": "0.8","cursor":"pointer"});
 	}).on("mouseleave", function(){
 		$(this).css({"opacity": "1","cursor":"default"});
-	}).on("click", function(){
+	}).on("click", function(){		
 		var wp = $(this).closest(".wizardPage");
 		wp.find(".glyphicon").remove();
 		var sign = $("<span class='glyphicon glyphicon-ok-circle glyphicon-2x'></span>");
-		$(this).find(".caption").last().append(sign);
-		$(this).find(".glyphicon").animate({"opacity": "1"});
+		$(this).children(".caption").append(sign);
+		$(this).find(".glyphicon").animate({"opacity": "1"});		
+		var btn= $(this).closest(".btn");
+		$wizard.steps( btn.attr("id").split("-")[0] );		
 	});
 
 	$("#genderM").on("click", function(){
