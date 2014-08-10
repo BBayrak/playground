@@ -3,47 +3,14 @@ $( document ).ready(function() {
 	var gender="";
 	var nuance="";
 	var effect="";
-	 
-	var $wizard = $("#wizard");
+	
+	$("#wizard").steps({
+		headerTag : "h2",
+		bodyTag : "section",
+		transitionEffect : "slideLeft"
+	});
 	
 
-	$wizard.steps
-	({
-		  /* Appearance */
-	    headerTag: "h1",
-	    bodyTag: "div",
-	    contentContainerTag: "div",
-	    actionContainerTag: "div",
-	    stepsContainerTag: "div",
-	    cssClass: "wizard",
-	    stepsOrientation: $.fn.steps.stepsOrientation.horizontal,
-
-	    /* Templates */
-	    titleTemplate: '<span class="number">#index#.</span> #title#',
-	    loadingTemplate: '<span class="spinner"></span> #text#',
-
-	    /* Behaviour */
-	    autoFocus: false,
-	    enableAllSteps: false,
-	    enableKeyNavigation: true,
-	    enablePagination: true,
-	    suppressPaginationOnFocus: true,
-	    enableContentCache: true,
-	    enableCancelButton: true,
-	    enableFinishButton: true,
-	    preloadContent: false,
-	    showFinishButtonAlways: false,
-	    forceMoveForward: false,
-	    saveState: false,
-	    startIndex: 0,
-
-	    /* Transition Effects */
-	    transitionEffect: $.fn.steps.transitionEffect.slideLeft ,
-	    transitionEffectSpeed: 200,
-
-
-
-	});
 
 //	$("#wizard").steps({transitionEffect: "slideLeft"});
 
