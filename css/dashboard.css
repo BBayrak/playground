@@ -127,4 +127,10 @@ background:url('../img/black_background_pattern_1280x800_79638.jpg') no-repeat c
 	  border-radius: 50%;	  
 }
 
-
+.myoverlay {
+  position:absolute;
+  left:50%;
+  top:50%;
+  opacity:0;
+  color:#fff
+}
