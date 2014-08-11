@@ -6,7 +6,8 @@ $( document ).ready(function() {
 	$wizard.steps({
 		headerTag : "h2",
 		bodyTag : "section",
-		transitionEffect : "slideLeft"
+		transitionEffect : "slideLeft",
+			enablePagination: false
 	});
 	
 
@@ -58,6 +59,12 @@ $( document ).ready(function() {
 		 * */
 		$wizard.steps( "next" );
 	});
+	
+	$(".next-step6").on("click", function(){
+		location.reload();
+	});
+	
+	
 	
 	function hideAll(){
 		$('#wizard').find(".fruchtig").hide();
