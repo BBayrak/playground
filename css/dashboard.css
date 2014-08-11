@@ -6,6 +6,15 @@
 body {
   padding-top: 0px;
 
+/*
+background:url('../img/black_background_pattern_1280x800_79638.jpg') no-repeat center center fixed;
+
+
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	transition: background 0.5s linear;*/
 }
 
 
@@ -109,9 +118,10 @@ body {
 
 .placeholder img {
   display: inline-block;
-  max-height:200px;
+  max-height:300px;
   width:auto;
-  padding: 20px;
+  padding: 10px;
+  border-radius: 50%;	
 }
 .rounded{
 	  border-radius: 50%;	  
