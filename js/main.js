@@ -1,6 +1,23 @@
 $( document ).ready(function() {
 
 	
+	
+	var mann=0; 
+	var frau=0; 
+	var tag =0;
+	var abend =0;
+	var fruehlingsommer=0;
+	var herbstwinter =0;
+	var orientalisch=0;
+	var holzig=0;
+	var fruchtig =0;
+	var frisch=0;
+	var wuerzig =0;
+	var suess =0;
+	var blumig =0;
+	var aquatisch =0;
+	var zitrus=0;
+	 
 	var $wizard = $("#wizard");
 	var marker = '<img src="img/orientalisch.jpg" class="img-responsive myoverlay" alt="Generic placeholder thumbnail">';
 	$wizard.steps({
@@ -27,6 +44,14 @@ $( document ).ready(function() {
 	$(".next-step1").on("click", function(){
 		$wizard.steps( "next" );		
 		setMarker($(this));
+		mann=0;
+		frau=0;
+		if($(this).attr("id")=="m"){
+			mann=1;	
+		}
+		else{
+			frau=1;
+		}					
 		$('#gender').val($(this).attr("id"));		
 	});
 
@@ -62,17 +87,20 @@ $( document ).ready(function() {
 	$(".next-step5").on("click", function(){
 		$('#zeit').val($(this).attr("id"));			
 		/* HIER DIE LISTE FÜR NÄCHSTE SEITE VORBEREITEN UNF FÜLLEN
-		 * */
-		getList();
+		 * */		
 		$wizard.steps( "next" );		
 		setMarker($(this));
+		
+		//getList();
 	});
 	
 	$(".next-step6").on("click", function(){
 		location.reload();
 	});
 	
-	
+	$("#wizard-t-5").on("click", function(){
+		getList();
+	});
 	
 	function hideAll(){
 		$('#wizard').find(".fruchtig").hide();
@@ -89,29 +117,63 @@ $( document ).ready(function() {
 		*/
 	}
 	
-	function getList(){
-
-
-		$.getJSON( "duftliste.json", function( data ) {
-			var items = [];
-			$.each( data, function( key, val ) {
-
-				var snippet = '<div class="col-xs-4 col-sm-4 placeholder">'+
-				'<img src="img/3772347-Pien-Flasche-2.jpg"'+
-					'class="img-responsive" alt="Generic placeholder thumbnail">'+
-				'<p><button type="button" class="btn btn-default btn-block" >'+ key +'</button></p>'+
-				'</div>';
-				
-				$("#empfehlungen").first().prepend(snippet);
-				
-			});
-			
-		});
-
-
-	}
-
 	
+	function getList(){
+	 var ajaxRequest;  // The variable that makes Ajax possible!
+		
+	 try{
+	   // Opera 8.0+, Firefox, Safari
+	   ajaxRequest = new XMLHttpRequest();
+	 }catch (e){
+	   // Internet Explorer Browsers
+	   try{
+	      ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+	   }catch (e) {
+	      try{
+	         ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+	      }catch (e){
+	         // Something went wrong
+	         alert("Your browser broke!");
+	         return false;
+	      }
+	   }
+	 }
+	 // Create a function that will receive data 
+	 // sent from the server and will update
+	 // div section in the same page.
+	 ajaxRequest.onreadystatechange = function(){
+	   if(ajaxRequest.readyState == 4){
+	      var ajaxDisplay = document.getElementById('empfehlung');
+	      ajaxDisplay.innerHTML = ajaxRequest.responseText;
+	   }
+	 }
+	 // Now get the value from user and pass it to
+	 // server script.
+	 /*var age = document.getElementById('age').value;
+	 var wpm = document.getElementById('wpm').value;
+	 var sex = document.getElementById('sex').value;
+	 var queryString = "?age=" + age ;
+	 queryString +=  "&wpm=" + wpm + "&sex=" + sex;*/
+	 queryString = "?";
+	 queryString += "mann="+mann; 
+	 queryString += "&frau="+frau;/* 
+	 &tag 
+	 &abend 
+	 &fruehlingsommer
+	 &herbstwinter 
+	 &orientalisch
+	 &holzig
+	 &fruchtig 
+	 &frisch
+	 &wuerzig 
+	 &suess 
+	 &blumig 
+	 &aquatisch 
+	 &zitrus*/
+	 ajaxRequest.open("GET", "fetch.php" + 
+	                              queryString, true);
+	 ajaxRequest.send(null); 
+	}
 	
 	$(".content").niceScroll({cursorcolor:"#bbb"});
 
