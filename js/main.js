@@ -2,21 +2,21 @@ $( document ).ready(function() {
 
 	
 	
-	var mann=0; 
-	var frau=0; 
-	var tag =0;
-	var abend =0;
-	var fruehlingsommer=0;
-	var herbstwinter =0;
-	var orientalisch=0;
-	var holzig=0;
-	var fruchtig =0;
-	var frisch=0;
-	var wuerzig =0;
-	var suess =0;
-	var blumig =0;
-	var aquatisch =0;
-	var zitrus=0;
+	var mann=%; 
+	var frau=%; 
+	var tag =%;
+	var abend =%;
+	var fruehlingsommer=%;
+	var herbstwinter =%;
+	var orientalisch=%;
+	var holzig=%;
+	var fruchtig =%;
+	var frisch=%;
+	var wuerzig =%;
+	var suess =%;
+	var blumig =%;
+	var aquatisch =%;
+	var zitrus=%;
 	 
 	var $wizard = $("#wizard");
 	var marker = '<img src="img/orientalisch.jpg" class="img-responsive myoverlay" alt="Generic placeholder thumbnail">';
@@ -42,62 +42,117 @@ $( document ).ready(function() {
 	//$(".checkbox").checkbox();
 	
 	$(".next-step1").on("click", function(){
-		$wizard.steps( "next" );		
-		setMarker($(this));
-		mann=0;
-		frau=0;
-		if($(this).attr("id")=="m"){
-			mann=1;	
-		}
-		else{
+		mann=%;
+		frau=%;
+		var gender=$(this).attr("id");
+		switch(gender){
+		case "m":
+			mann=1;
+			break;
+		case "f":
 			frau=1;
-		}					
-		$('#gender').val($(this).attr("id"));		
+			break;		
+		}
+		$wizard.steps( "next" );
+		setMarker($(this));
 	});
 
 	$(".next-step2").on("click", function(){
-		
-		if($(this).attr("id") == "holzig" )
-		{
-			$('#effect').val("würzig");
-			$wizard.steps( "nextnext" );
-		}
-		else{
+		orientalisch=%;
+		holzig=%;
+		fruchtig=%;
+		frisch=%;
+		var nuance= $(this).attr("id");
+		switch(nuance){
+		case "orientalisch":
+			orientalisch =1;
 			$wizard.steps( "next" );
-			$('#nuance').val($(this).attr("id"));
-		}		
+			break;
+		case "holzig":
+			holzig=1;
+			wuerzig=1;
+			$wizard.steps( "nextnext" );
+			break;
+		case "fruchtig":
+			fruchtig=1;
+			$wizard.steps( "next" );
+			break;
+		case "frisch":
+			frisch=1;
+			$wizard.steps( "next" );
+			break;
+		}
+		
 		setMarker($(this));
 		hideAll();
 		$('#wizard').find("."+$(this).attr("id")).show();		
 	});
 	
-	$(".next-step3").on("click", function(){		
-		$('#effect').val($(this).attr("id"));
+	$(".next-step3").on("click", function(){	
+		wuerzig=%;
+		suess=%;
+		blumig=%;
+		aquatisch=%;
+		zitrus=%;
+		var effect=$(this).attr("id");
+		switch(effect){
+		case "wuerzig":
+			wuerig=1;
+			break;
+		case "suess":
+			suess=1;
+			break;
+		case "blumig":
+			blumig=1;
+			break;
+		case "aquatisch":
+			aquatisch=1;
+			break;
+		case "zitrus":
+			zitrus=1;
+			break;
+		}
 		$wizard.steps( "next" );
-		setMarker($(this));
-				
+		setMarker($(this));				
 	});
 	
 	$(".next-step4").on("click", function(){
-		$('#jahr').val($(this).attr("id"));	
+		fruehlingsommer=%;
+		herbstwinter=%;
+		var jahreszeit = $(this).attr("id");
+		switch(jahreszeit){
+		case "fruehlingsommer":
+			fruehlingsommer=1;
+			break;
+		case "herbstwinter":
+			herbstwinter=1;
+			break;
+		}	
 		$wizard.steps( "next" );		
 		setMarker($(this));
 	});
 	
 	$(".next-step5").on("click", function(){
-		$('#zeit').val($(this).attr("id"));			
-		/* HIER DIE LISTE FÜR NÄCHSTE SEITE VORBEREITEN UNF FÜLLEN
-		 * */		
+		tag=%;
+		abend=%;
+		var zeit=$(this).attr("id");
+		switch(zeit){
+		case "tag":
+			tag=1;
+			break;
+		case "abend":
+			abend=1;
+			break;
+		}				
 		$wizard.steps( "next" );		
 		setMarker($(this));
-		
-		//getList();
 	});
 	
 	$(".next-step6").on("click", function(){
 		location.reload();
 	});
 	
+	//onenter load database data
 	$("#wizard-t-5").on("click", function(){
 		getList();
 	});
@@ -155,21 +210,21 @@ $( document ).ready(function() {
 	 var queryString = "?age=" + age ;
 	 queryString +=  "&wpm=" + wpm + "&sex=" + sex;*/
 	 queryString = "?";
-	 queryString += "mann="+mann; 
-	 queryString += "&frau="+frau;/* 
-	 &tag 
-	 &abend 
-	 &fruehlingsommer
-	 &herbstwinter 
-	 &orientalisch
-	 &holzig
-	 &fruchtig 
-	 &frisch
-	 &wuerzig 
-	 &suess 
-	 &blumig 
-	 &aquatisch 
-	 &zitrus*/
+	 queryString += "mann='"+mann+"'"; 
+	 queryString += "&frau='"+frau+"'";
+	 queryString += "&tag='"+tag+"'";
+	 queryString += "&abend='"+abend+"'";
+	 queryString += "&fruehlingsommer='"+fruehlingsommer+"'";
+	 queryString += "&herbstwinter='"+ herbstwinter+"'";
+	 queryString += "&orientalisch='"+orientalisch+"'";
+	 queryString += "&holzig='"+holzig+"'";
+	 queryString += "&fruchtig='"+ fruchtig+"'";
+	 queryString += "&frisch='"+frisch+"'";
+	 queryString += "&wuerzig='"+ wuerzig+"'";
+	 queryString += "&suess='"+ suess+"'";
+	 queryString += "&blumig='"+ blumig+"'";
+	 queryString += "&aquatisch='"+ aquatisch+"'";
+	 queryString += "&zitrus='"+zitrus+"'";
 	 ajaxRequest.open("GET", "fetch.php" + 
 	                              queryString, true);
 	 ajaxRequest.send(null); 
