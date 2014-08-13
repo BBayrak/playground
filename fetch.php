@@ -27,7 +27,7 @@ if (!$con) {
 if(!mysqli_select_db($con,"asperias"))
 	printf("Error: %s\n", mysqli_error($con));
 
-$sql = "SELECT * FROM `perfumes` WHERE"; 
+$sql = "SELECT * FROM `table 1` WHERE"; 
 $sql .= " `mann` LIKE " .$mann;
 $sql .=	" AND `frau` LIKE ".$frau;
 $sql .=	" AND `tag` LIKE ".$tag;

@@ -2,21 +2,21 @@ $( document ).ready(function() {
 
 	
 	
-	var mann=%; 
-	var frau=%; 
-	var tag =%;
-	var abend =%;
-	var fruehlingsommer=%;
-	var herbstwinter =%;
-	var orientalisch=%;
-	var holzig=%;
-	var fruchtig =%;
-	var frisch=%;
-	var wuerzig =%;
-	var suess =%;
-	var blumig =%;
-	var aquatisch =%;
-	var zitrus=%;
+	var mann='%'; 
+	var frau='%'; 
+	var tag ='%';
+	var abend ='%';
+	var fruehlingsommer='%';
+	var herbstwinter ='%';
+	var orientalisch='%';
+	var holzig='%';
+	var fruchtig ='%';
+	var frisch='%';
+	var wuerzig ='%';
+	var suess ='%';
+	var blumig ='%';
+	var aquatisch ='%';
+	var zitrus='%';
 	 
 	var $wizard = $("#wizard");
 	var marker = '<img src="img/orientalisch.jpg" class="img-responsive myoverlay" alt="Generic placeholder thumbnail">';
@@ -42,8 +42,8 @@ $( document ).ready(function() {
 	//$(".checkbox").checkbox();
 	
 	$(".next-step1").on("click", function(){
-		mann=%;
-		frau=%;
+		mann='%';
+		frau='%';
 		var gender=$(this).attr("id");
 		switch(gender){
 		case "m":
@@ -58,10 +58,10 @@ $( document ).ready(function() {
 	});
 
 	$(".next-step2").on("click", function(){
-		orientalisch=%;
-		holzig=%;
-		fruchtig=%;
-		frisch=%;
+		orientalisch='%';
+		holzig='%';
+		fruchtig='%';
+		frisch='%';
 		var nuance= $(this).attr("id");
 		switch(nuance){
 		case "orientalisch":
@@ -89,11 +89,11 @@ $( document ).ready(function() {
 	});
 	
 	$(".next-step3").on("click", function(){	
-		wuerzig=%;
-		suess=%;
-		blumig=%;
-		aquatisch=%;
-		zitrus=%;
+		wuerzig='%';
+		suess='%';
+		blumig='%';
+		aquatisch='%';
+		zitrus='%';
 		var effect=$(this).attr("id");
 		switch(effect){
 		case "wuerzig":
@@ -117,8 +117,8 @@ $( document ).ready(function() {
 	});
 	
 	$(".next-step4").on("click", function(){
-		fruehlingsommer=%;
-		herbstwinter=%;
+		fruehlingsommer='%';
+		herbstwinter='%';
 		var jahreszeit = $(this).attr("id");
 		switch(jahreszeit){
 		case "fruehlingsommer":
@@ -133,8 +133,8 @@ $( document ).ready(function() {
 	});
 	
 	$(".next-step5").on("click", function(){
-		tag=%;
-		abend=%;
+		tag='%';
+		abend='%';
 		var zeit=$(this).attr("id");
 		switch(zeit){
 		case "tag":
