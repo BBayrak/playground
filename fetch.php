@@ -43,7 +43,7 @@ $sql .=	" AND `suess` LIKE ".$suess;
 $sql .=	" AND `blumig` LIKE ".$blumig;
 $sql .=	" AND `aquatisch` LIKE ".$aquatisch;
 $sql .=	" AND `zitrus` LIKE ".$zitrus;
-$sql .= " ORDER BY RAND() LIMIT 6";
+$sql .= " ORDER BY RAND() LIMIT 5";
 
 //echo($sql);
 $result = mysqli_query($con,$sql);
