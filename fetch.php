@@ -43,6 +43,7 @@ $sql .=	" AND `suess` LIKE ".$suess;
 $sql .=	" AND `blumig` LIKE ".$blumig;
 $sql .=	" AND `aquatisch` LIKE ".$aquatisch;
 $sql .=	" AND `zitrus` LIKE ".$zitrus;
+$sql .= " ORDER BY RAND() LIMIT 6";
 
 //echo($sql);
 $result = mysqli_query($con,$sql);
@@ -51,13 +52,14 @@ if (!$result) {
 	exit();
 }
 
+$g = $mann== "1" ? "H" : "D"; 
 $display_string = '<div class="owl-carousel">';
 
 while($row = mysqli_fetch_array($result)) {
-	$display_string .= '<div class="item">';
+	$display_string .= '<div class="item placeholders">';
 	$display_string .=       '<img src="img/3772347-Pien-Flasche-2.jpg"';
-	$display_string .=                'class="img-responsive" alt="Generic placeholder thumbnail">';
-	$display_string .='      <p><button type="button" class="btn btn-default" >'.$row['code'].' '. $row['model'] .' '. $row['marke'] .'</button></p>';
+	$display_string .=                'class="img-responsive" alt="Generic thumbnail">';
+	$display_string .='      <p><button type="button" class="btn btn-default" >'.$g."-".$row['code'].'</button></p>';
 	$display_string .=	'</div>';
 }
 
