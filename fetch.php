@@ -51,15 +51,17 @@ if (!$result) {
 	exit();
 }
 
-$display_string = '';
+$display_string = '<div class="owl-carousel">';
 
 while($row = mysqli_fetch_array($result)) {
-	$display_string .= '<div class="col-xs-6 col-sm-6 placeholder">';
+	$display_string .= '<div class="item">';
 	$display_string .=       '<img src="img/3772347-Pien-Flasche-2.jpg"';
 	$display_string .=                'class="img-responsive" alt="Generic placeholder thumbnail">';
-	$display_string .='      <p><button type="button" class="btn btn-default btn-block" >'.$row['code'].' '. $row['model'] .' '. $row['marke'] .'</button></p>';
+	$display_string .='      <p><button type="button" class="btn btn-default" >'.$row['code'].' '. $row['model'] .' '. $row['marke'] .'</button></p>';
 	$display_string .=	'</div>';
 }
+
+$display_string .=	'</div>';
 
 mysqli_close($con);
 

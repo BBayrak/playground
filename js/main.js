@@ -200,6 +200,17 @@ $( document ).ready(function() {
 	   if(ajaxRequest.readyState == 4){
 	      var ajaxDisplay = document.getElementById('empfehlung');
 	      ajaxDisplay.innerHTML = ajaxRequest.responseText;
+
+	      $(".owl-carousel").owlCarousel({
+	    	  
+	    	  autoPlay: 3000, //Set AutoPlay to 3 seconds
+	    	  margin:10,
+	    	  items : 3.5,
+	    	  /*itemsDesktop : [1199,3.5],
+	    	  itemsDesktopSmall : [979,3.5]*/
+	    	   
+	    	  });
+
 	   }
 	 }
 	 // Now get the value from user and pass it to
@@ -231,7 +242,19 @@ $( document ).ready(function() {
 	}
 	
 	$(".content").niceScroll({cursorcolor:"#bbb"});
-
+   
+	
+	
+	 $("#owl-demo").owlCarousel({
+		 
+		 autoPlay: 3000, //Set AutoPlay to 3 seconds
+		  
+		 items : 4,
+		 itemsDesktop : [1199,3],
+		 itemsDesktopSmall : [979,3]
+		  
+		 });
+	 
 	/*
 
 	function startTime() {
