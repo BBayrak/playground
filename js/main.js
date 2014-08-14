@@ -96,10 +96,12 @@ $( document ).ready(function() {
 		zitrus='%';
 		var effect=$(this).attr("id");
 		switch(effect){
-		case "wuerzig":
-			wuerig=1;
+		case "wuerzig1":
+		case "wuerzig2":
+			wuerzig=1;
 			break;
-		case "suess":
+		case "suess1":
+		case "suess2":
 			suess=1;
 			break;
 		case "blumig":
